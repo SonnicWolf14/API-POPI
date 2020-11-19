@@ -1,4 +1,5 @@
 function checkvalue() {
-    let name = window.document.getElementsByClassName('user-input');
+    let name = document.getElementsByClassName('user-input');
+    console.log(name);
         window.location.href = "fileUploadScreen.html";
 }
