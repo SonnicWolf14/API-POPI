@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script type='text/javascript' src='bower_components\knockout\Gruntfile.js'></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>POPI-compliance</title>
     <link rel="stylesheet" href="main.css" />
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
-    <script src="login.js"></script>
+    <script type="text/javascript" src="login.js"></script>
 </head>
 <form>
     <div class="imgContainer logo">
@@ -25,7 +23,7 @@
             <input type="password" placeholder="Enter Password" class="pass-input" required>
         </div>
         <div class="submit">
-            <button type="submit" data-bind="click">Login</button>
+            <button type="submit" onclick="checkvalue()" >Login</button>
         </div>
     </div>
 </form>
