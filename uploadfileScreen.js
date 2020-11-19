@@ -30,7 +30,7 @@ function processData(csv) {
         lines.push(allTextLines.shift().split(','));
     }
 	console.log(lines);
-	drawOutput(lines);
+	// drawOutput(lines);
 }
 
 //if your csv file contains the column names as the first line
