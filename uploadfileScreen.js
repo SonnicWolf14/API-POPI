@@ -33,7 +33,17 @@ function processData(csv) {
 	drawOutput(lines);
 }
 
-//if your csv file contains the column names as the first line
+function processTXT(txt) {
+    var allTextLines = txt.split(' ');
+    var lines = [];
+    while (allTextLines.length) {
+        lines.push(allTextLines.shift().split(','));
+    }
+	console.log(lines);
+	drawOutput(lines);
+}
+
+//if csv file contains the column names as the first line
 function processDataAsObj(csv){
     var allTextLines = csv.split(/\r\n|\n/);
     var lines = [];
@@ -98,4 +108,25 @@ function drawOutputAsObj(lines){
 	document.getElementById("output").appendChild(table);
 }
 
+function getData() {
+    let lines = array;
+    let data = post('process_backend/prossesCSV', lines);
+    return data;
+}
+
+function inbetween() {
+    let data = getData()
+}
+
+$.getJSON($SCRIPT_ROOT + '/_array2python', {
+    wordlist: JSON.stringify(list)
+}, function(data){
+    console.log(data.result)
+    $( "#result" ).text(data.result);
+});
+
+function validateData(){
+    // getData();
+    window.location.href = "dataCheck.html";
+}
 

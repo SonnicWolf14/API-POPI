@@ -1,4 +1,7 @@
 <html>
+    {% extends "layout.html" %}
+    {% block title %}Test{% endblock %}
+    {% block content %}
     <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.min.css">
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -17,7 +20,7 @@
           <label for="csvFileInput"> <strong>CSV File:</strong>
           </label>
           <input type="file" id="csvFileInput" onchange="handleFiles(this.files)"
-          accept=".csv" class="btn-secondary">
+          accept=".csv">
         </div>
       </fieldset>
     </span>
@@ -32,6 +35,7 @@
 </body>
 <div>
     <label for="btn-correct">Does the data shown seem correct, and can be prosessed</label>
-    <button class="btn-correct btn-secondary">Correct</button>
+    <button class="btn-correct btn-secondary" onclick="validateData()">Correct</button>
 </div>
+{% endblock %}
 </html>
